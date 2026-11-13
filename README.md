@@ -52,7 +52,7 @@ remote MCP tools into ordinary LangChain tools.
 ## Quickstart
 
 ```bash
-git clone git@github.com:datavilleorg/langchain-mcp-quickstart.git
+git clone https://github.com/datavilleorg/langchain-mcp-quickstart.git
 cd langchain-mcp-quickstart
 
 python -m venv .venv

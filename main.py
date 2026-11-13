@@ -14,7 +14,20 @@ from langchain.agents import create_agent
 from langchain.chat_models import init_chat_model
 from langchain.mcp import MCPAdapter
 
-SYSTEM_PROMPT = """You are a helpful assistant with access to Dataville data."""
+SYSTEM_PROMPT = """You are a helpful assistant with access to Dataville data.
+
+You have two tools:
+- list_dataville_sources lists the available data sources.
+- search_dataville searches one source by keyword.
+
+When a question needs a fact that should come from a real source, call Dataville
+instead of answering from memory.
+- For company filings and financials, use the edgar source. Add a form type such
+  as "10-K" or "10-Q" to the keywords when you need a specific filing.
+- For company background and history, use the wikipedia source.
+
+Cite the source name, a relevant date, and a URL from the results. Do not invent
+numbers, dates, or links. If a result is missing or the data looks stale, say so."""
 
 
 async def main():
