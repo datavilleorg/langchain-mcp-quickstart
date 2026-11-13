@@ -1,0 +1,4 @@
+langchain[mcp]>=1.4
+langchain-openrouter
+# Using Anthropic directly instead? pip install langchain-anthropic
+# Using OpenAI instead? pip install langchain-openai
