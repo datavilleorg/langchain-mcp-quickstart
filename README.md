@@ -61,7 +61,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 export OPENROUTER_API_KEY=YOUR_PROVIDER_KEY
-export DATAVILLE_API_KEY=YOUR_DATAVILLE_KEY   # optional
+export DATAVILLE_API_KEY=YOUR_DATAVILLE_KEY
 
 python main.py
 ```
